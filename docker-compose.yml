@@ -1,0 +1,12 @@
+services:
+  ioc:
+    image: ghcr.io/lnls-dig/fofb-mon
+    build:
+      context: ./
+      dockerfile: docker/Dockerfile
+      labels:
+        org.opencontainers.image.source: https://github.com/lnls-dig/fofb-mon
+      args:
+        REPONAME: fofb-mon
+        RUNDIR: /opt/fofb-mon/iocBoot/iocFOFBMon
+        ENTRYPOINT: ./st.cmd
