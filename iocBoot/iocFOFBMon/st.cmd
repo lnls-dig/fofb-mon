@@ -10,9 +10,31 @@ dbLoadDatabase "../../dbd/FOFBMon.dbd"
 FOFBMon_registerRecordDeviceDriver(pdbbase) 
 
 ## Load record instances
-#dbLoadRecords("../../db/FOFBMon.db","user=root")
+dbLoadRecords("../../db/FOFBMon.template", "P=SI-Glob:, R=AP-FOFB:, VALUE=Current-RB")
+dbLoadRecords("../../db/FOFBMon.template", "P=SI-Glob:, R=AP-FOFB:, VALUE=Current-Mon")
+dbLoadRecords("../../db/FOFBMon.template", "P=SI-Glob:, R=AP-FOFB:, VALUE=CurrentRaw-Mon")
+
+dbLoadRecords("../../db/FOFBMon.template", "P=SI-Glob:, R=AP-FOFB:, VALUE=Voltage-RB")
+dbLoadRecords("../../db/FOFBMon.template", "P=SI-Glob:, R=AP-FOFB:, VALUE=Voltage-Mon")
+dbLoadRecords("../../db/FOFBMon.template", "P=SI-Glob:, R=AP-FOFB:, VALUE=VoltageRaw-Mon")
+
+dbLoadRecords("../../db/FOFBMon.template", "P=SI-Glob:, R=AP-FOFB:, VALUE=CurrentRef-Mon")
+dbLoadRecords("../../db/FOFBMon.template", "P=SI-Glob:, R=AP-FOFB:, VALUE=CurrentRawRef-Mon")
+
+dbLoadRecords("../../db/FOFBMon.template", "P=SI-Glob:, R=AP-FOFB:, VALUE=FOFBAcc-Mon")
 
 iocInit()
 
 ## Start any sequence programs
-#seq sncFOFBMon,"user=root"
+seq FOFBMonConnect, "P=SI-Glob:, R=AP-FOFB:, VALUE=Current-RB"
+seq FOFBMonConnect, "P=SI-Glob:, R=AP-FOFB:, VALUE=Current-Mon"
+seq FOFBMonConnect, "P=SI-Glob:, R=AP-FOFB:, VALUE=CurrentRaw-Mon"
+
+seq FOFBMonConnect, "P=SI-Glob:, R=AP-FOFB:, VALUE=Voltage-RB"
+seq FOFBMonConnect, "P=SI-Glob:, R=AP-FOFB:, VALUE=Voltage-Mon"
+seq FOFBMonConnect, "P=SI-Glob:, R=AP-FOFB:, VALUE=VoltageRaw-Mon"
+
+seq FOFBMonConnect, "P=SI-Glob:, R=AP-FOFB:, VALUE=CurrentRef-Mon"
+seq FOFBMonConnect, "P=SI-Glob:, R=AP-FOFB:, VALUE=CurrentRawRef-Mon"
+
+seq FOFBMonConnect, "P=SI-Glob:, R=AP-FOFB:, VALUE=FOFBAcc-Mon"
