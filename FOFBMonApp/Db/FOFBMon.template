@@ -1,0 +1,4 @@
+record(aai, "${P}${R}${VALUE}"){
+    field(FTVL, FLOAT)
+    field(NELM, 160)
+}

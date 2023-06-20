@@ -18,8 +18,11 @@ FOFBMon_DBD += base.dbd
 # Include dbd files from all support applications:
 #FOFBMon_DBD += xxx.dbd
 
+FOFBMon_SRCS += FOFBMonConnect.stt
+FOFBMon_DBD += FOFBMonConnect.dbd
+
 # Add all the support libraries needed by this IOC
-#FOFBMon_LIBS += xxx
+FOFBMon_LIBS += seq pv
 
 # FOFBMon_registerRecordDeviceDriver.cpp derives from FOFBMon.dbd
 FOFBMon_SRCS += FOFBMon_registerRecordDeviceDriver.cpp
