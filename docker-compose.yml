@@ -9,4 +9,4 @@ services:
       args:
         REPONAME: fofb-mon
         RUNDIR: /opt/fofb-mon/iocBoot/iocFOFBMon
-        ENTRYPOINT: ./st.cmd
+        ENTRYPOINT: ./run.sh
