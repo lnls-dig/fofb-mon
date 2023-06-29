@@ -23,6 +23,11 @@ dbLoadRecords("../../db/FOFBMon.template", "P=SI-Glob:, R=AP-FOFB:, VALUE=Curren
 
 dbLoadRecords("../../db/FOFBMon.template", "P=SI-Glob:, R=AP-FOFB:, VALUE=FOFBAcc-Mon")
 
+dbLoadRecords("../../db/FOFBMon.template", "P=SI-Glob:, R=AP-FOFB:, VALUE=Kick-RB")
+dbLoadRecords("../../db/FOFBMon.template", "P=SI-Glob:, R=AP-FOFB:, VALUE=Kick-Mon")
+dbLoadRecords("../../db/FOFBMon.template", "P=SI-Glob:, R=AP-FOFB:, VALUE=KickRef-Mon")
+dbLoadRecords("../../db/FOFBMon.template", "P=SI-Glob:, R=AP-FOFB:, VALUE=KickAcc-Mon")
+
 iocInit()
 
 ## Start any sequence programs
@@ -38,3 +43,8 @@ seq FOFBMonConnect, "P=SI-Glob:, R=AP-FOFB:, VALUE=CurrentRef-Mon"
 seq FOFBMonConnect, "P=SI-Glob:, R=AP-FOFB:, VALUE=CurrentRawRef-Mon"
 
 seq FOFBMonConnect, "P=SI-Glob:, R=AP-FOFB:, VALUE=FOFBAcc-Mon"
+
+seq FOFBMonConnect, "P=SI-Glob:, R=AP-FOFB:, VALUE=Kick-RB"
+seq FOFBMonConnect, "P=SI-Glob:, R=AP-FOFB:, VALUE=Kick-Mon"
+seq FOFBMonConnect, "P=SI-Glob:, R=AP-FOFB:, VALUE=KickRef-Mon"
+seq FOFBMonConnect, "P=SI-Glob:, R=AP-FOFB:, VALUE=KickAcc-Mon"
