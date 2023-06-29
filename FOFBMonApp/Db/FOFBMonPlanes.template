@@ -1,0 +1,15 @@
+record(subArray, "${P}${R}${PRE}CH${POST}"){
+    field(FTVL, FLOAT)
+    field(INP,"${P}${R}${PRE}${POST}.VAL CP")
+    field(MALM, 80)
+    field(NELM, 80)
+    field(INDX, 0)
+}
+
+record(subArray, "${P}${R}${PRE}CV${POST}"){
+    field(FTVL, FLOAT)
+    field(INP,"${P}${R}${PRE}${POST}.VAL CP")
+    field(MALM, 160) # has to be 160 so we can read the whole of INP
+    field(NELM, 80)
+    field(INDX, 80)
+}
