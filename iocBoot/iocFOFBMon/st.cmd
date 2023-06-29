@@ -28,6 +28,11 @@ dbLoadRecords("../../db/FOFBMon.template", "P=SI-Glob:, R=AP-FOFB:, VALUE=Kick-M
 dbLoadRecords("../../db/FOFBMon.template", "P=SI-Glob:, R=AP-FOFB:, VALUE=KickRef-Mon")
 dbLoadRecords("../../db/FOFBMon.template", "P=SI-Glob:, R=AP-FOFB:, VALUE=KickAcc-Mon")
 
+dbLoadRecords("../../db/FOFBMonPlanes.template", "P=SI-Glob:, R=AP-FOFB:, PRE=Kick, POST=-RB")
+dbLoadRecords("../../db/FOFBMonPlanes.template", "P=SI-Glob:, R=AP-FOFB:, PRE=Kick, POST=-Mon")
+dbLoadRecords("../../db/FOFBMonPlanes.template", "P=SI-Glob:, R=AP-FOFB:, PRE=Kick, POST=Ref-Mon")
+dbLoadRecords("../../db/FOFBMonPlanes.template", "P=SI-Glob:, R=AP-FOFB:, PRE=Kick, POST=Acc-Mon")
+
 iocInit()
 
 ## Start any sequence programs
