@@ -6,7 +6,7 @@ include $(TOP)/configure/CONFIG
 #----------------------------------------------------
 # Create and install (or just install) into <top>/db
 # databases, templates, substitutions like this
-DB += FOFBMon.template
+DB += FOFBMon.template FOFBMonPlanes.template
 
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add
