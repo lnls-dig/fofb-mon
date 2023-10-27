@@ -169,12 +169,15 @@ assign read_data to {
 };
 monitor read_data;
 
+evflag read_data_event;
+sync read_data to read_data_event;
+
 %%#include <stdio.h>
 %%#include <string.h>
 
 ss scan {
     state read {
-        when (delay(0.1)) {
+        when (delay(0.1) && evTestAndClear(read_data_event)) {
             memcpy(data, read_data, sizeof data);
             if (pvPutComplete(data)) pvPut(data, ASYNC);
         } state read
